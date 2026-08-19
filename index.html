@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Starter Board</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">BCA CS Camp</p>
+      <h1>Starter Board</h1>
+    </div>
+    <button id="randomIdeaButton">Random Idea</button>
+  </header>
+
+  <main>
+    <section class="panel intro">
+      <h2>Simple web app starter</h2>
+      <p>
+        Add items, mark them done, and change this into your own project.
+      </p>
+    </section>
+
+    <section class="panel">
+      <h2>Add an item</h2>
+
+      <form id="itemForm" class="item-form">
+        <label>
+          Name
+          <input id="itemName" type="text" placeholder="Try a new club" required />
+        </label>
+
+        <label>
+          Category
+          <select id="itemCategory">
+            <option>Creative</option>
+            <option>Logic</option>
+            <option>Teamwork</option>
+            <option>School</option>
+          </select>
+        </label>
+
+        <label>
+          Points
+          <input id="itemPoints" type="number" min="1" max="100" value="10" required />
+        </label>
+
+        <button type="submit">Add Item</button>
+      </form>
+    </section>
+
+    <section class="scoreboard">
+      <article class="stat">
+        <span id="completedCount">0</span>
+        <p>completed</p>
+      </article>
+      <article class="stat">
+        <span id="scoreCount">0</span>
+        <p>points</p>
+      </article>
+      <article class="stat">
+        <span id="totalCount">0</span>
+        <p>total items</p>
+      </article>
+    </section>
+
+    <section class="item-section">
+      <div class="section-heading">
+        <h2>List</h2>
+        <button id="clearDoneButton" class="secondary">Clear Done</button>
+      </div>
+
+      <div id="itemList" class="item-list"></div>
+    </section>
+  </main>
+
+  <template id="itemTemplate">
+    <article class="item-card">
+      <div>
+        <p class="category"></p>
+        <h3></h3>
+        <p class="points"></p>
+      </div>
+      <button class="complete-button">Done</button>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
